@@ -114,7 +114,9 @@ jobs:
            node-version: 18
 
       - name: install pnpm
-        run: npm install -g pnpm
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
       - name: Install dependencies
         run: pnpm install
 
