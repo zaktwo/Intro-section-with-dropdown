@@ -1,0 +1,60 @@
+# This is the way i endup using to install Vite and deploy it to github action pages and versal 
+
+    1 - installing node.js on my pc by downloading it from this link https://nodejs.org/en
+    2 - using npm to install pnpm with command: npm install -g pnpm 
+    3 - add pnpm path to envirement variables in system ->  about -> advanced system settings 
+            -> envirement variables -> system variables -> path -> add C:\Users\~User~\AppData\Local\pnpm
+    4 - Create a Project Folder
+    5 - install Vite :
+            pnpm create vite@latest ~Project~Name~ (to make a new folder, use dot . to create in the same folder)
+    6 - Choise wich language to utilise for developemnt 
+    7 - cd to the folder
+    8 - pnpm install 
+    9 - pnpm run dev
+   10 - Create a vite.config.js file 
+   11 - add this code: 
+        import { defineConfig } from "vite";
+
+        export default defineConfig({
+             base: "/Intro-section-with-dropdown" // change the line according to your github repository
+        })
+   12 - go to github repository -> settings -> pages -> Source -> 
+              Github actions -> static html
+   13 - edit static.yml with this script:
+            # Use the script available in https://pnpm.io/continuous-integration
+         name: pnpm Example Workflow
+         on:
+              push:
+              jobs:
+             build:
+             runs-on: ubuntu-20.04
+             strategy:
+              matrix:
+             node-version: [18]
+               steps:
+               - uses: actions/checkout@v3
+              - uses: pnpm/action-setup@v2
+                 with:
+                version: 7
+               - name: Use Node.js ${{ matrix.node-version }}
+                 uses: actions/setup-node@v3
+            with:
+               node-version: ${{ matrix.node-version }}
+               cache: 'pnpm'
+             - name: Install dependencies
+                run: pnpm install
+    14 - This should be enough to deploy to github pages actions (if i didn't fogot something )
+
+
+    ###############################
+
+    the deployement to Vercel is much easier 
+
+    1 - create an account on Versel.com 
+    2 - sign up 
+    3 - use a hobby account
+    4 - link your account to github
+    5 - chose your repository 
+    6 - hit deploy 
+    7 - wait few seconds 
+    8 - thats it the link will be shown  
