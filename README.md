@@ -6,7 +6,9 @@
 
 
 ## This is the Live URL
-Live URL: https://zaktwo.github.io/Intro-section-with-dropdown/
+Vercel Live url: https://intro-section-with-dropdown-pi.vercel.app/
+
+(NOT WORKING, I HAVE NO IDEA HOW TO SETUP STATIC.YML)github pages Live URL: https://zaktwo.github.io/Intro-section-with-dropdown/
 
 Thanks for checking out this front-end coding challenge.
 
