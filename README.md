@@ -6,7 +6,7 @@
 
 
 ## This is the Live URL
-Live URL: 
+Live URL: https://zaktwo.github.io/Intro-section-with-dropdown/
 
 Thanks for checking out this front-end coding challenge.
 
