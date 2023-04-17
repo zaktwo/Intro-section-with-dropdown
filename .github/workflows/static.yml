@@ -106,17 +106,15 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
-
+      - uses: pnpm/action-setup@v2
+          with:
+            version: 7
       
       - name: Install Node.js
         uses: actions/setup-node@v3
           with:
            node-version: 18.16.0
 
-      - name: install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
       - name: Install dependencies
         run: pnpm install
 
