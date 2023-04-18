@@ -1,10 +1,10 @@
 # Use the script available in https://pnpm.io/continuous-integration
-name: pnpm Example Workflow
+name: Build and Deploy
 on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18]
@@ -23,8 +23,8 @@ jobs:
  
     - name: Build
       run:  pnpm run build
- deploy:
-    environment:
+deploy:
+  environment:
       name: github-pages
       #  url: ${{steps.deployment.outputs.page_url}}
     runs-on: ubuntu-latest
