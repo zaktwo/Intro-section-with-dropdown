@@ -65,8 +65,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           
-    14 - This should be enough to deploy to github pages actions (if i didn't fogot something )
-
+    14 - This should be enough to deploy to github pages actions (if i didn't forgot something ) 
+        Edit: this was not enough in the end. it installed correctly but didn't give me the deployement link
 
     ###############################
 
